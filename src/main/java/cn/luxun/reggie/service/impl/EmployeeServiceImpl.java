@@ -95,4 +95,15 @@ public class EmployeeServiceImpl extends ServiceImpl<EmployeeMapper, Employee> i
 
 		return Result.success(pageInfo);
 	}
+
+	@Override
+	public Result<String> updateEmployeeById(HttpServletRequest request, Employee employee) {
+
+		Long empId = (Long) request.getSession().getAttribute("employee");
+		employee.setUpdateTime(LocalDateTime.now());
+		employee.setUpdateUser(empId);
+		this.updateById(employee);
+
+		return Result.success("员工信息修改成功");
+	}
 }

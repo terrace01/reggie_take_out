@@ -44,4 +44,12 @@ public interface EmployeeService extends IService<Employee> {
 	 * @return
 	 */
 	Result<Page> getEmployeeByPage(int page, int pageSize, String name);
+
+	/**
+	 * 根据员工id修改员工信息
+	 *
+	 * @param employee
+	 * @return
+	 */
+	Result<String> updateEmployeeById(HttpServletRequest request, Employee employee);
 }

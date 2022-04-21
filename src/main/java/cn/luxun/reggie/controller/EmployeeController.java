@@ -69,4 +69,16 @@ public class EmployeeController {
 		log.info("page={},pageSize={},name={}", page, pageSize, name);
 		return employeeService.getEmployeeByPage(page, pageSize, name);
 	}
+
+	/**
+	 * 根据员工id修改员工信息
+	 *
+	 * @param employee
+	 * @return
+	 */
+	@PutMapping
+	public Result<String> updateEmployeeById(HttpServletRequest request, @RequestBody Employee employee) {
+		log.info(employee.toString());
+		return employeeService.updateEmployeeById(request, employee);
+	}
 }
