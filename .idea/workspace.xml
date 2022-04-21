@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="39f8c582-236f-46ec-a07e-303f7b7d5619" name="Changes" comment="add: isEnableEmployeeAccount and">
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/luxun/reggie/common/JacksonObjectMapper.java" afterDir="false" />
+    <list default="true" id="39f8c582-236f-46ec-a07e-303f7b7d5619" name="Changes" comment="add: isEnabledEmployeeAccount and JacksonObjectMapper">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/luxun/reggie/config/WebMvcConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/luxun/reggie/config/WebMvcConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cn/luxun/reggie/controller/EmployeeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/luxun/reggie/controller/EmployeeController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cn/luxun/reggie/service/EmployeeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/luxun/reggie/service/EmployeeService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cn/luxun/reggie/service/impl/EmployeeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/luxun/reggie/service/impl/EmployeeServiceImpl.java" afterDir="false" />
@@ -102,7 +100,7 @@
       <workItem from="1650501169602" duration="4226000" />
       <workItem from="1650505858375" duration="300000" />
       <workItem from="1650518098003" duration="5739000" />
-      <workItem from="1650526496070" duration="9912000" />
+      <workItem from="1650526496070" duration="10567000" />
     </task>
     <task id="LOCAL-00001" summary="add: Result and User login">
       <created>1650505401271</created>
@@ -125,7 +123,14 @@
       <option name="project" value="LOCAL" />
       <updated>1650538928842</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="add: isEnabledEmployeeAccount and JacksonObjectMapper">
+      <created>1650542693145</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1650542693145</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -135,6 +140,7 @@
     <MESSAGE value="add: Result and User login" />
     <MESSAGE value="add: Exception and Insert new User" />
     <MESSAGE value="add: Employee list page" />
-    <option name="LAST_COMMIT_MESSAGE" value="add: Employee list page" />
+    <MESSAGE value="add: isEnabledEmployeeAccount and JacksonObjectMapper" />
+    <option name="LAST_COMMIT_MESSAGE" value="add: isEnabledEmployeeAccount and JacksonObjectMapper" />
   </component>
 </project>

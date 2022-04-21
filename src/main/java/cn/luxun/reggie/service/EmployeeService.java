@@ -52,4 +52,11 @@ public interface EmployeeService extends IService<Employee> {
 	 * @return
 	 */
 	Result<String> updateEmployeeById(HttpServletRequest request, Employee employee);
+
+	/**
+	 * 根据员工id查询员工信息
+	 * @param id
+	 * @return
+	 */
+	Result<Employee> getEmployeeById(Long id);
 }
