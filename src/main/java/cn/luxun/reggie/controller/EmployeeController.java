@@ -4,12 +4,10 @@ package cn.luxun.reggie.controller;
 import cn.luxun.reggie.common.Result;
 import cn.luxun.reggie.entity.Employee;
 import cn.luxun.reggie.service.EmployeeService;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -55,6 +53,20 @@ public class EmployeeController {
 	@PostMapping()
 	public Result<String> addEmployeeByInfo(HttpServletRequest request, @RequestBody Employee employee) {
 
-		return employeeService.addEmployeeByInfo(request,employee);
+		return employeeService.addEmployeeByInfo(request, employee);
+	}
+
+	/**
+	 * 员工分页查询
+	 *
+	 * @param page
+	 * @param pageSize
+	 * @param name
+	 * @return
+	 */
+	@GetMapping("/page")
+	public Result<Page> getEmployeeByPage(int page, int pageSize, String name) {
+		log.info("page={},pageSize={},name={}", page, pageSize, name);
+		return employeeService.getEmployeeByPage(page, pageSize, name);
 	}
 }

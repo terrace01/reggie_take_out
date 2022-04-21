@@ -2,6 +2,7 @@ package cn.luxun.reggie.service;
 
 import cn.luxun.reggie.common.Result;
 import cn.luxun.reggie.entity.Employee;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.IService;
 
 import javax.servlet.http.HttpServletRequest;
@@ -33,4 +34,14 @@ public interface EmployeeService extends IService<Employee> {
 	 * @return
 	 */
 	Result<String> addEmployeeByInfo(HttpServletRequest request, Employee employee);
+
+	/**
+	 * 员工分页查询
+	 *
+	 * @param page
+	 * @param pageSize
+	 * @param name
+	 * @return
+	 */
+	Result<Page> getEmployeeByPage(int page, int pageSize, String name);
 }

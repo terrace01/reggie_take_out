@@ -5,7 +5,9 @@ import cn.luxun.reggie.entity.Employee;
 import cn.luxun.reggie.mapper.EmployeeMapper;
 import cn.luxun.reggie.service.EmployeeService;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import org.apache.commons.lang.StringUtils;
 import org.springframework.stereotype.Service;
 import org.springframework.util.DigestUtils;
 
@@ -71,5 +73,26 @@ public class EmployeeServiceImpl extends ServiceImpl<EmployeeMapper, Employee> i
 		employee.setUpdateUser(empId);
 		this.save(employee);
 		return Result.success("新增员工成功");
+	}
+
+	@Override
+	public Result<Page> getEmployeeByPage(int page, int pageSize, String name) {
+
+		// 构造分页构造器
+		Page pageInfo = new Page(page, pageSize);
+
+		// 构造条件构造器
+		LambdaQueryWrapper<Employee> queryWrapper = new LambdaQueryWrapper<>();
+
+		// 添加过滤条件
+		queryWrapper.like(StringUtils.isNotEmpty(name), Employee::getName, name);
+
+		// 添加排序条件
+		queryWrapper.orderByDesc(Employee::getUpdateTime);
+
+		// 执行查询
+		this.page(pageInfo, queryWrapper);
+
+		return Result.success(pageInfo);
 	}
 }
