@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.util.DigestUtils;
 
 import javax.servlet.http.HttpServletRequest;
+import java.time.LocalDateTime;
 
 
 @Service
@@ -47,5 +48,28 @@ public class EmployeeServiceImpl extends ServiceImpl<EmployeeMapper, Employee> i
 		request.getSession().setAttribute("employee", emp.getId());
 		return Result.success(emp);
 
+	}
+
+	@Override
+	public Result<String> logout(HttpServletRequest request) {
+		request.getSession().removeAttribute("employee");
+		return Result.success("退出成功");
+	}
+
+	@Override
+	public Result<String> addEmployeeByInfo(HttpServletRequest request, Employee employee) {
+
+		// 设置初始密码为123456 需要进行md5加密
+		employee.setPassword(DigestUtils.md5DigestAsHex("123456".getBytes()));
+
+		employee.setCreateTime(LocalDateTime.now());
+		employee.setUpdateTime(LocalDateTime.now());
+
+		// 从 session 当中获取当前登录用户的id
+		Long empId = (Long) request.getSession().getAttribute("employee");
+		employee.setCreateUser(empId);
+		employee.setUpdateUser(empId);
+		this.save(employee);
+		return Result.success("新增员工成功");
 	}
 }

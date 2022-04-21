@@ -22,8 +22,39 @@ public class EmployeeController {
 	private EmployeeService employeeService;
 
 
+	/**
+	 * 用户登录功能
+	 *
+	 * @param request
+	 * @param employee
+	 * @return
+	 */
 	@PostMapping("/login")
 	public Result<Employee> login(HttpServletRequest request, @RequestBody Employee employee) {
-		return employeeService.loginByUserNameAndPassword(request,employee);
+		return employeeService.loginByUserNameAndPassword(request, employee);
+	}
+
+	/**
+	 * 用户退出登录功能
+	 *
+	 * @param request
+	 * @return
+	 */
+	@PostMapping("/logout")
+	public Result<String> logout(HttpServletRequest request) {
+		return employeeService.logout(request);
+	}
+
+
+	/**
+	 * 新增员工
+	 *
+	 * @param employee
+	 * @return
+	 */
+	@PostMapping()
+	public Result<String> addEmployeeByInfo(HttpServletRequest request, @RequestBody Employee employee) {
+
+		return employeeService.addEmployeeByInfo(request,employee);
 	}
 }
