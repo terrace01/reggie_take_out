@@ -35,4 +35,18 @@ public class GlobalExceptionHandler {
 	}
 
 
+	/**
+	 * 异常处理方法
+	 *
+	 * @param ex
+	 * @return
+	 */
+	@ExceptionHandler(CustomException.class)
+	public Result doException(CustomException ex) {
+		log.error(ex.getMessage());
+		return Result.error(ex.getMessage());
+	}
+
+
+
 }
