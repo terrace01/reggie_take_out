@@ -21,3 +21,6 @@ mybatis-plus:
     db-config:
       # 主键自增
       id-type: ASSIGN_ID
+
+reggie:
+  path: D:\images\
