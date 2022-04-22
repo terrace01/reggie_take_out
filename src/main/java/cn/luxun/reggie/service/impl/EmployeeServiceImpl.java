@@ -64,13 +64,15 @@ public class EmployeeServiceImpl extends ServiceImpl<EmployeeMapper, Employee> i
 		// 设置初始密码为123456 需要进行md5加密
 		employee.setPassword(DigestUtils.md5DigestAsHex("123456".getBytes()));
 
+/*
 		employee.setCreateTime(LocalDateTime.now());
 		employee.setUpdateTime(LocalDateTime.now());
+*/
 
 		// 从 session 当中获取当前登录用户的id
-		Long empId = (Long) request.getSession().getAttribute("employee");
+/*		Long empId = (Long) request.getSession().getAttribute("employee");
 		employee.setCreateUser(empId);
-		employee.setUpdateUser(empId);
+		employee.setUpdateUser(empId);*/
 		this.save(employee);
 		return Result.success("新增员工成功");
 	}
@@ -100,8 +102,8 @@ public class EmployeeServiceImpl extends ServiceImpl<EmployeeMapper, Employee> i
 	public Result<String> updateEmployeeById(HttpServletRequest request, Employee employee) {
 
 		Long empId = (Long) request.getSession().getAttribute("employee");
-		employee.setUpdateTime(LocalDateTime.now());
-		employee.setUpdateUser(empId);
+/*		employee.setUpdateTime(LocalDateTime.now());
+		employee.setUpdateUser(empId);*/
 		this.updateById(employee);
 
 		return Result.success("员工信息修改成功");

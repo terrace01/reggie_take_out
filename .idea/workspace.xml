@@ -4,12 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="39f8c582-236f-46ec-a07e-303f7b7d5619" name="Changes" comment="add: isEnabledEmployeeAccount and JacksonObjectMapper">
+    <list default="true" id="39f8c582-236f-46ec-a07e-303f7b7d5619" name="Changes" comment="add: MyMetaObjectHandler">
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/luxun/reggie/common/EmployeeThreadLocal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/luxun/reggie/common/MyMetaObjectHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/luxun/reggie/controller/EmployeeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/luxun/reggie/controller/EmployeeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/luxun/reggie/service/EmployeeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/luxun/reggie/service/EmployeeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/luxun/reggie/ReggieApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/luxun/reggie/ReggieApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/luxun/reggie/entity/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/luxun/reggie/entity/Employee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/luxun/reggie/filter/LoginCheckFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/luxun/reggie/filter/LoginCheckFilter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cn/luxun/reggie/service/impl/EmployeeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/luxun/reggie/service/impl/EmployeeServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/luxun/reggie/config/WebMvcConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/luxun/reggie/config/WebMvcConfig.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,7 +102,8 @@
       <workItem from="1650501169602" duration="4226000" />
       <workItem from="1650505858375" duration="300000" />
       <workItem from="1650518098003" duration="5739000" />
-      <workItem from="1650526496070" duration="10567000" />
+      <workItem from="1650526496070" duration="12618000" />
+      <workItem from="1650594496940" duration="6768000" />
     </task>
     <task id="LOCAL-00001" summary="add: Result and User login">
       <created>1650505401271</created>
@@ -130,7 +133,14 @@
       <option name="project" value="LOCAL" />
       <updated>1650542693145</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="add: edit employee">
+      <created>1650543349609</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1650543349609</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -141,6 +151,7 @@
     <MESSAGE value="add: Exception and Insert new User" />
     <MESSAGE value="add: Employee list page" />
     <MESSAGE value="add: isEnabledEmployeeAccount and JacksonObjectMapper" />
-    <option name="LAST_COMMIT_MESSAGE" value="add: isEnabledEmployeeAccount and JacksonObjectMapper" />
+    <MESSAGE value="add: edit employee" />
+    <option name="LAST_COMMIT_MESSAGE" value="add: edit employee" />
   </component>
 </project>
