@@ -9,6 +9,8 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 
 @Slf4j
 @RestController
@@ -25,7 +27,7 @@ public class CategoryController {
 	 * @return
 	 */
 	@PostMapping()
-	public Result<String> save(@RequestBody Category category) {
+	public Result<String> saveCategoryByParams(@RequestBody Category category) {
 		log.info("category: {}", category);
 		return categoryService.saveCategoryByParams(category);
 	}
@@ -64,6 +66,17 @@ public class CategoryController {
 	public Result<String> updateCategoryById(@RequestBody Category category) {
 		log.info("修改分类信息:{}", category);
 		return categoryService.updateCategoryById(category);
+	}
+
+	/**
+	 * 获取所有分类
+	 *
+	 * @param category
+	 * @return
+	 */
+	@GetMapping("/list")
+	public Result<List<Category>> getAllCategory(Category category) {
+		return categoryService.getAllCategory(category);
 	}
 
 }

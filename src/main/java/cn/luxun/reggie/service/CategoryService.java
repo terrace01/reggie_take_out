@@ -5,6 +5,8 @@ import cn.luxun.reggie.entity.Category;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.IService;
 
+import java.util.List;
+
 public interface CategoryService extends IService<Category> {
 
 	/**
@@ -37,4 +39,12 @@ public interface CategoryService extends IService<Category> {
 	 * @return
 	 */
 	Result<String> updateCategoryById(Category category);
+
+	/**
+	 * 获取所有分类
+	 *
+	 * @param category
+	 * @return
+	 */
+	Result<List<Category>> getAllCategory(Category category);
 }

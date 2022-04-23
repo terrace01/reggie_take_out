@@ -16,6 +16,8 @@ import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class CategoryServiceImpl extends ServiceImpl<CategoryMapper, Category> implements CategoryService {
 
@@ -82,5 +84,22 @@ public class CategoryServiceImpl extends ServiceImpl<CategoryMapper, Category> i
 	public Result<String> updateCategoryById(Category category) {
 		this.updateById(category);
 		return Result.success("修改分类信息成功");
+	}
+
+	@Override
+	public Result<List<Category>> getAllCategory(Category category) {
+
+		// 条件构造器
+		LambdaQueryWrapper<Category> queryWrapper = new LambdaQueryWrapper<>();
+
+		// 添加条件
+		queryWrapper.eq(category.getType() != null, Category::getType, category.getType());
+
+		// 添加排序条件
+		queryWrapper.orderByAsc(Category::getSort).orderByDesc(Category::getUpdateTime);
+
+		List<Category> list = this.list(queryWrapper);
+
+		return Result.success(list);
 	}
 }

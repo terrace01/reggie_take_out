@@ -4,13 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="39f8c582-236f-46ec-a07e-303f7b7d5619" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/luxun/reggie/controller/CommonController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/demo/upload.html" afterDir="false" />
+    <list default="true" id="39f8c582-236f-46ec-a07e-303f7b7d5619" name="Changes" comment="add: insert dish and setmeal">
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/luxun/reggie/controller/DishController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/luxun/reggie/dto/DishDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/luxun/reggie/dto/SetmealDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/luxun/reggie/entity/DishFlavor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/luxun/reggie/mapper/DishFlavorMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/luxun/reggie/service/DishFlavorService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/luxun/reggie/service/impl/DishFlavorServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/luxun/reggie/filter/LoginCheckFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/luxun/reggie/filter/LoginCheckFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/luxun/reggie/ReggieApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/luxun/reggie/ReggieApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/luxun/reggie/controller/CategoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/luxun/reggie/controller/CategoryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/luxun/reggie/controller/CommonController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/luxun/reggie/controller/CommonController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/luxun/reggie/service/CategoryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/luxun/reggie/service/CategoryService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/luxun/reggie/service/DishService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/luxun/reggie/service/DishService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/luxun/reggie/service/impl/CategoryServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/luxun/reggie/service/impl/CategoryServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/luxun/reggie/service/impl/DishServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/luxun/reggie/service/impl/DishServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,6 +36,14 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="ProjectId" id="283tBn9jlZps4Uj81FZZ59VY31h" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -47,7 +64,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/backend/page" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/cn/luxun/reggie/dto" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
@@ -57,11 +74,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Programm\JavaWeb\reggie_take_out\src\main\java\cn\luxun\reggie\dto" />
+      <recent name="E:\Programm\JavaWeb\reggie_take_out\src\main\java\cn\luxun\reggie\entity" />
       <recent name="E:\Programm\JavaWeb\reggie_take_out\src\main\resources\backend\page" />
       <recent name="E:\Programm\JavaWeb\reggie_take_out\src\main\resources\backend\demo" />
-      <recent name="E:\Programm\JavaWeb\reggie_take_out\src\main\java\cn\luxun\reggie\entity" />
       <recent name="E:\Programm\JavaWeb\reggie_take_out\src\main\java\cn\luxun\reggie\common" />
-      <recent name="E:\myWeb\JavaWeb\reggie_take_out\src\main\resources" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="cn.luxun.reggie" />
@@ -108,6 +125,7 @@
       <workItem from="1650526496070" duration="12618000" />
       <workItem from="1650594496940" duration="13925000" />
       <workItem from="1650623995267" duration="8544000" />
+      <workItem from="1650677923981" duration="5624000" />
     </task>
     <task id="LOCAL-00001" summary="add: Result and User login">
       <created>1650505401271</created>
@@ -172,6 +190,8 @@
     <MESSAGE value="add: edit employee" />
     <MESSAGE value="add: fixed auto_fill by MyMetaObjectHandler" />
     <MESSAGE value="add: category crud and CustomException" />
-    <option name="LAST_COMMIT_MESSAGE" value="add: category crud and CustomException" />
+    <MESSAGE value="add: dish and setmeal" />
+    <MESSAGE value="add: insert dish and setmeal" />
+    <option name="LAST_COMMIT_MESSAGE" value="add: insert dish and setmeal" />
   </component>
 </project>
