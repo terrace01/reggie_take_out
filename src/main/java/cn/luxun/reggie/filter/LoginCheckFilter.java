@@ -40,6 +40,8 @@ public class LoginCheckFilter implements Filter {
 				"/backend/**",
 				"/front/**",
 				"/common/**",
+				"/user/sendMsg",
+				"/user/login"
 		};
 
 		// 判断本次请求是否需要处理
@@ -59,6 +61,19 @@ public class LoginCheckFilter implements Filter {
 			// 将员工id传入封装到的 ThreadLocal中 进行保存
 			Long empId = (Long) request.getSession().getAttribute("employee");
 			EmployeeThreadLocal.setCurrentId(empId);
+			// System.out.println("@" + EmployeeThreadLocal.getCurrentId());
+
+
+			filterChain.doFilter(request, reponse);
+			return;
+		}
+
+		if (request.getSession().getAttribute("user") != null) {
+			log.info("用户已登录，用户id为{}", request.getSession().getAttribute("user"));
+
+			// 将员工id传入封装到的 ThreadLocal中 进行保存
+			Long userId = (Long) request.getSession().getAttribute("user");
+			EmployeeThreadLocal.setCurrentId(userId);
 			// System.out.println("@" + EmployeeThreadLocal.getCurrentId());
 
 
