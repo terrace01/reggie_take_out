@@ -22,11 +22,14 @@ import java.util.List;
 public class CategoryServiceImpl extends ServiceImpl<CategoryMapper, Category> implements CategoryService {
 
 
-	@Autowired
-	private DishService dishService;
+	private final DishService dishService;
+	public CategoryServiceImpl(DishService dishService) {
+		this.dishService = dishService;
+	}
 
 	@Autowired
 	private SetmealService setmealService;
+
 
 	@Override
 	public Result<String> saveCategoryByParams(Category category) {

@@ -4,22 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="39f8c582-236f-46ec-a07e-303f7b7d5619" name="Changes" comment="add: insert dish and setmeal">
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/luxun/reggie/controller/DishController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/luxun/reggie/dto/DishDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/luxun/reggie/dto/SetmealDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/luxun/reggie/entity/DishFlavor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/luxun/reggie/mapper/DishFlavorMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/luxun/reggie/service/DishFlavorService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/luxun/reggie/service/impl/DishFlavorServiceImpl.java" afterDir="false" />
+    <list default="true" id="39f8c582-236f-46ec-a07e-303f7b7d5619" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/luxun/reggie/ReggieApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/luxun/reggie/ReggieApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/luxun/reggie/controller/CategoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/luxun/reggie/controller/CategoryController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/luxun/reggie/controller/CommonController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/luxun/reggie/controller/CommonController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/luxun/reggie/service/CategoryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/luxun/reggie/service/CategoryService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/luxun/reggie/controller/DishController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/luxun/reggie/controller/DishController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cn/luxun/reggie/service/DishService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/luxun/reggie/service/DishService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cn/luxun/reggie/service/impl/CategoryServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/luxun/reggie/service/impl/CategoryServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cn/luxun/reggie/service/impl/DishServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/luxun/reggie/service/impl/DishServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/luxun/reggie/ReggieApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/luxun/reggie/ReggieApplication.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -125,7 +116,7 @@
       <workItem from="1650526496070" duration="12618000" />
       <workItem from="1650594496940" duration="13925000" />
       <workItem from="1650623995267" duration="8544000" />
-      <workItem from="1650677923981" duration="5624000" />
+      <workItem from="1650677923981" duration="12745000" />
     </task>
     <task id="LOCAL-00001" summary="add: Result and User login">
       <created>1650505401271</created>
@@ -176,7 +167,14 @@
       <option name="project" value="LOCAL" />
       <updated>1650626366765</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="add: insert dish and setmeal">
+      <created>1650685179303</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1650685179303</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -193,5 +191,15 @@
     <MESSAGE value="add: dish and setmeal" />
     <MESSAGE value="add: insert dish and setmeal" />
     <option name="LAST_COMMIT_MESSAGE" value="add: insert dish and setmeal" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.io.FileNotFoundException" package="java.io" />
+          <option name="timeStamp" value="3" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
