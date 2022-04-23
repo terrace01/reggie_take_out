@@ -11,6 +11,8 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @Slf4j
 @RestController
 @RequestMapping("/dish")
@@ -63,5 +65,16 @@ public class DishController {
 	@PutMapping
 	public Result<String> updateDishByParamsWithFlavor(@RequestBody DishDto dishDto) {
 		return dishService.updateDishByParamsWithFlavor(dishDto);
+	}
+
+	/**
+	 * 根据条件查询对应的菜品数据
+	 *
+	 * @param dish
+	 * @return
+	 */
+	@GetMapping("/list")
+	public Result<List<Dish>> getAllDish(Dish dish) {
+		return dishService.getAllDish(dish);
 	}
 }

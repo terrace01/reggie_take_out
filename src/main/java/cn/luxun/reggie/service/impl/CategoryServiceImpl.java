@@ -1,6 +1,5 @@
 package cn.luxun.reggie.service.impl;
 
-
 import cn.luxun.reggie.common.CustomException;
 import cn.luxun.reggie.common.Result;
 import cn.luxun.reggie.entity.Category;
@@ -13,7 +12,6 @@ import cn.luxun.reggie.service.SetmealService;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -23,13 +21,12 @@ public class CategoryServiceImpl extends ServiceImpl<CategoryMapper, Category> i
 
 
 	private final DishService dishService;
-	public CategoryServiceImpl(DishService dishService) {
+	private final SetmealService setmealService;
+
+	public CategoryServiceImpl(DishService dishService, SetmealService setmealService) {
 		this.dishService = dishService;
+		this.setmealService = setmealService;
 	}
-
-	@Autowired
-	private SetmealService setmealService;
-
 
 	@Override
 	public Result<String> saveCategoryByParams(Category category) {

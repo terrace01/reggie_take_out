@@ -36,7 +36,6 @@ public class DishServiceImpl extends ServiceImpl<DishMapper, Dish> implements Di
 
 	private final CategoryService categoryService;
 
-
 	@Override
 	@Transactional
 	public Result<String> saveDishByParamsWithFlavor(DishDto dishDto) {
@@ -143,5 +142,21 @@ public class DishServiceImpl extends ServiceImpl<DishMapper, Dish> implements Di
 		}).collect(Collectors.toList());
 		dishFlavorService.saveBatch(flavors);
 		return Result.success("修改菜品成功");
+	}
+
+	@Override
+	public Result<List<Dish>> getAllDish(Dish dish) {
+
+		// 构造查询条件
+		LambdaQueryWrapper<Dish> queryWrapper = new LambdaQueryWrapper<>();
+		queryWrapper.eq(dish.getCategoryId() != null, Dish::getCategoryId, dish.getCategoryId());
+		// 添加条件 查询状态为1（起售状态）的菜品
+		queryWrapper.eq(Dish::getStatus, 1);
+
+		// 添加排序条件
+		queryWrapper.orderByAsc(Dish::getSort).orderByDesc(Dish::getUpdateTime);
+
+		List<Dish> list = this.list(queryWrapper);
+		return Result.success(list);
 	}
 }

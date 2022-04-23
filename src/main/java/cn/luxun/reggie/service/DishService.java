@@ -6,6 +6,8 @@ import cn.luxun.reggie.entity.Dish;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.IService;
 
+import java.util.List;
+
 public interface DishService extends IService<Dish> {
 
 	/**
@@ -40,4 +42,12 @@ public interface DishService extends IService<Dish> {
 	 * @return
 	 */
 	Result<String> updateDishByParamsWithFlavor(DishDto dishDto);
+
+	/**
+	 * 根据条件查询对应的菜品数据
+	 *
+	 * @param dish
+	 * @return
+	 */
+	Result<List<Dish>> getAllDish(Dish dish);
 }
