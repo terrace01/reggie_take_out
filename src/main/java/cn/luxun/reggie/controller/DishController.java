@@ -73,8 +73,19 @@ public class DishController {
 	 * @param dish
 	 * @return
 	 */
-	@GetMapping("/list")
+	// @GetMapping("/list")
 	public Result<List<Dish>> getAllDish(Dish dish) {
 		return dishService.getAllDish(dish);
+	}
+
+	/**
+	 * 根据条件查询对应的菜品数据
+	 *
+	 * @param dish
+	 * @return
+	 */
+	@GetMapping("/list")
+	public Result<List<DishDto>> getAllDishByDto(Dish dish) {
+		return dishService.getAllDishByDto(dish);
 	}
 }

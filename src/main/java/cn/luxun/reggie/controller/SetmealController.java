@@ -58,4 +58,16 @@ public class SetmealController {
 	public Result<String> deleteSetmealById(@RequestParam List<Long> ids) {
 		return setmealService.deleteSetmealById(ids);
 	}
+
+	/**
+	 * 根据条件查询套餐
+	 *
+	 * @param setmeal
+	 * @return
+	 */
+	@GetMapping("/list")
+	public Result<List<Setmeal>> getAllSetmealByParams(Setmeal setmeal) {
+		return setmealService.getAllSetmealByParams(setmeal);
+
+	}
 }

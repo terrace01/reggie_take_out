@@ -120,4 +120,19 @@ public class SetmealServiceImpl extends ServiceImpl<SetmealMapper, Setmeal> impl
 		setmealDishService.remove(lambdaQueryWrapper);
 		return Result.success("套餐数据删除成功");
 	}
+
+	@Override
+	public Result<List<Setmeal>> getAllSetmealByParams(Setmeal setmeal) {
+		// 构造条件构造器
+		LambdaQueryWrapper<Setmeal> queryWrapper = new LambdaQueryWrapper();
+
+		// 添加过滤条件
+		queryWrapper.eq(setmeal.getCategoryId() != null, Setmeal::getCategoryId, setmeal.getCategoryId());
+		queryWrapper.eq(setmeal.getStatus() != null, Setmeal::getStatus, setmeal.getStatus());
+		queryWrapper.orderByDesc(Setmeal::getUpdateTime);
+
+		List<Setmeal> list = this.list(queryWrapper);
+
+		return Result.success(list);
+	}
 }

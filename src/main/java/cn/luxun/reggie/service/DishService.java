@@ -50,4 +50,13 @@ public interface DishService extends IService<Dish> {
 	 * @return
 	 */
 	Result<List<Dish>> getAllDish(Dish dish);
+
+	/**
+	 * 根据条件查询对应的菜品数据
+	 *
+	 * @param dish
+	 * @return
+	 */
+	Result<List<DishDto>> getAllDishByDto(Dish dish);
+
 }

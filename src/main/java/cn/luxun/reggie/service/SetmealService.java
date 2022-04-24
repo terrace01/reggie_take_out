@@ -36,4 +36,12 @@ public interface SetmealService extends IService<Setmeal> {
 	 * @return
 	 */
 	Result<String> deleteSetmealById(List<Long> ids);
+
+	/**
+	 * 根据条件查询套餐
+	 *
+	 * @param setmeal
+	 * @return
+	 */
+	Result<List<Setmeal>> getAllSetmealByParams(Setmeal setmeal);
 }
