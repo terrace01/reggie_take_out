@@ -7,6 +7,8 @@ import cn.luxun.reggie.service.SetmealDishService;
 import cn.luxun.reggie.service.SetmealService;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.CacheEvict;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -30,6 +32,7 @@ public class SetmealController {
 	 * @return
 	 */
 	@PostMapping
+	@CacheEvict(value = "setmealCache", allEntries = true)
 	public Result<String> saveSetmeal(@RequestBody SetmealDto setmealDto) {
 		return setmealService.saveSetmeal(setmealDto);
 	}
@@ -55,6 +58,7 @@ public class SetmealController {
 	 * @return
 	 */
 	@DeleteMapping()
+	@CacheEvict(value = "setmealCache", allEntries = true)
 	public Result<String> deleteSetmealById(@RequestParam List<Long> ids) {
 		return setmealService.deleteSetmealById(ids);
 	}
@@ -66,6 +70,7 @@ public class SetmealController {
 	 * @return
 	 */
 	@GetMapping("/list")
+	@Cacheable(value = "setmealCache", key = "#setmeal.categoryId + '_' + #setmeal.status")
 	public Result<List<Setmeal>> getAllSetmealByParams(Setmeal setmeal) {
 		return setmealService.getAllSetmealByParams(setmeal);
 
