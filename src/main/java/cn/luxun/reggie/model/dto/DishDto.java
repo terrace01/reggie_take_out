@@ -1,9 +1,10 @@
-package cn.luxun.reggie.dto;
+package cn.luxun.reggie.model.dto;
 
 
-import cn.luxun.reggie.entity.Dish;
-import cn.luxun.reggie.entity.DishFlavor;
+import cn.luxun.reggie.model.entity.Dish;
+import cn.luxun.reggie.model.entity.DishFlavor;
 import lombok.Data;
+
 import java.util.ArrayList;
 import java.util.List;
 

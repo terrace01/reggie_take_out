@@ -1,8 +1,8 @@
 package cn.luxun.reggie.controller;
 
-import cn.luxun.reggie.common.Result;
-import cn.luxun.reggie.dto.SetmealDto;
-import cn.luxun.reggie.entity.Setmeal;
+import cn.luxun.reggie.model.Result;
+import cn.luxun.reggie.model.dto.SetmealDto;
+import cn.luxun.reggie.model.entity.Setmeal;
 import cn.luxun.reggie.service.SetmealDishService;
 import cn.luxun.reggie.service.SetmealService;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;

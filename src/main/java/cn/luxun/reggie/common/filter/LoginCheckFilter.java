@@ -1,8 +1,8 @@
-package cn.luxun.reggie.filter;
+package cn.luxun.reggie.common.filter;
 
 
-import cn.luxun.reggie.common.EmployeeThreadLocal;
-import cn.luxun.reggie.common.Result;
+import cn.luxun.reggie.utils.EmployeeThreadLocal;
+import cn.luxun.reggie.model.Result;
 import com.alibaba.fastjson.JSON;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.util.AntPathMatcher;
@@ -41,7 +41,11 @@ public class LoginCheckFilter implements Filter {
 				"/front/**",
 				"/common/**",
 				"/user/sendMsg",
-				"/user/login"
+				"/user/login",
+				"/doc.html",
+				"/webjars/**",
+				"/swagger-resources",
+				"/v2/api-docs"
 		};
 
 		// 判断本次请求是否需要处理

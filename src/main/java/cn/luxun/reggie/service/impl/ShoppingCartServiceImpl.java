@@ -1,8 +1,8 @@
 package cn.luxun.reggie.service.impl;
 
-import cn.luxun.reggie.common.EmployeeThreadLocal;
-import cn.luxun.reggie.common.Result;
-import cn.luxun.reggie.entity.ShoppingCart;
+import cn.luxun.reggie.utils.EmployeeThreadLocal;
+import cn.luxun.reggie.model.Result;
+import cn.luxun.reggie.model.entity.ShoppingCart;
 import cn.luxun.reggie.mapper.ShoppingCartMapper;
 import cn.luxun.reggie.service.ShoppingCartService;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;

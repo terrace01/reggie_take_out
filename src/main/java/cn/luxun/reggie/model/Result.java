@@ -1,4 +1,4 @@
-package cn.luxun.reggie.common;
+package cn.luxun.reggie.model;
 
 import lombok.Data;
 

@@ -1,4 +1,4 @@
-package cn.luxun.reggie.entity;
+package cn.luxun.reggie.model.entity;
 
 import lombok.Data;
 

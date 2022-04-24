@@ -1,7 +1,7 @@
 package cn.luxun.reggie.controller;
 
-import cn.luxun.reggie.common.Result;
-import cn.luxun.reggie.entity.User;
+import cn.luxun.reggie.model.Result;
+import cn.luxun.reggie.model.entity.User;
 import cn.luxun.reggie.service.UserService;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.tomcat.util.http.parser.HttpParser;

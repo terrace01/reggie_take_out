@@ -1,7 +1,7 @@
 package cn.luxun.reggie.service.impl;
 
-import cn.luxun.reggie.common.Result;
-import cn.luxun.reggie.entity.Employee;
+import cn.luxun.reggie.model.Result;
+import cn.luxun.reggie.model.entity.Employee;
 import cn.luxun.reggie.mapper.EmployeeMapper;
 import cn.luxun.reggie.service.EmployeeService;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;

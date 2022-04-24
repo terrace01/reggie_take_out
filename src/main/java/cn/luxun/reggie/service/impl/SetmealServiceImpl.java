@@ -1,12 +1,12 @@
 package cn.luxun.reggie.service.impl;
 
 
-import cn.luxun.reggie.common.CustomException;
-import cn.luxun.reggie.common.Result;
-import cn.luxun.reggie.dto.SetmealDto;
-import cn.luxun.reggie.entity.Category;
-import cn.luxun.reggie.entity.Setmeal;
-import cn.luxun.reggie.entity.SetmealDish;
+import cn.luxun.reggie.common.Exception.CustomException;
+import cn.luxun.reggie.model.Result;
+import cn.luxun.reggie.model.dto.SetmealDto;
+import cn.luxun.reggie.model.entity.Category;
+import cn.luxun.reggie.model.entity.Setmeal;
+import cn.luxun.reggie.model.entity.SetmealDish;
 import cn.luxun.reggie.mapper.SetmealMapper;
 import cn.luxun.reggie.service.CategoryService;
 import cn.luxun.reggie.service.SetmealDishService;

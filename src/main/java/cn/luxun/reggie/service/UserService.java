@@ -1,7 +1,7 @@
 package cn.luxun.reggie.service;
 
-import cn.luxun.reggie.common.Result;
-import cn.luxun.reggie.entity.User;
+import cn.luxun.reggie.model.Result;
+import cn.luxun.reggie.model.entity.User;
 import com.baomidou.mybatisplus.extension.service.IService;
 
 import javax.servlet.http.HttpSession;
@@ -20,7 +20,7 @@ public interface UserService extends IService<User> {
 	/**
 	 * 移动端用户登录
 	 *
-	 * @param user
+	 * @param map
 	 * @return
 	 */
 	Result<User> login(Map map, HttpSession session);

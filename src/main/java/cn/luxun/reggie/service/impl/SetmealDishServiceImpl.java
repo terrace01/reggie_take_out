@@ -1,6 +1,6 @@
 package cn.luxun.reggie.service.impl;
 
-import cn.luxun.reggie.entity.SetmealDish;
+import cn.luxun.reggie.model.entity.SetmealDish;
 import cn.luxun.reggie.mapper.SetmealDishMapper;
 import cn.luxun.reggie.service.SetmealDishService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;

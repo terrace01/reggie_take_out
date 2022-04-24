@@ -1,9 +1,10 @@
-package cn.luxun.reggie.dto;
+package cn.luxun.reggie.model.dto;
 
 
-import cn.luxun.reggie.entity.Setmeal;
-import cn.luxun.reggie.entity.SetmealDish;
+import cn.luxun.reggie.model.entity.Setmeal;
+import cn.luxun.reggie.model.entity.SetmealDish;
 import lombok.Data;
+
 import java.util.List;
 
 @Data

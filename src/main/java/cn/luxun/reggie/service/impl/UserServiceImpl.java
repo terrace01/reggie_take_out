@@ -1,14 +1,13 @@
 package cn.luxun.reggie.service.impl;
 
-import cn.luxun.reggie.common.Result;
-import cn.luxun.reggie.common.ValidateCodeUtils;
-import cn.luxun.reggie.entity.User;
+import cn.luxun.reggie.model.Result;
+import cn.luxun.reggie.utils.ValidateCodeUtils;
+import cn.luxun.reggie.model.entity.User;
 import cn.luxun.reggie.mapper.UserMapper;
 import cn.luxun.reggie.service.UserService;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.apache.commons.lang.StringUtils;
-import org.apache.ibatis.logging.stdout.StdOutImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;

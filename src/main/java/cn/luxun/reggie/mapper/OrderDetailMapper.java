@@ -1,6 +1,6 @@
 package cn.luxun.reggie.mapper;
 
-import cn.luxun.reggie.entity.OrderDetail;
+import cn.luxun.reggie.model.entity.OrderDetail;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import org.apache.ibatis.annotations.Mapper;
 

@@ -1,9 +1,9 @@
 package cn.luxun.reggie.service.impl;
 
-import cn.luxun.reggie.common.CustomException;
-import cn.luxun.reggie.common.EmployeeThreadLocal;
-import cn.luxun.reggie.common.Result;
-import cn.luxun.reggie.entity.*;
+import cn.luxun.reggie.common.Exception.CustomException;
+import cn.luxun.reggie.utils.EmployeeThreadLocal;
+import cn.luxun.reggie.model.Result;
+import cn.luxun.reggie.model.entity.*;
 import cn.luxun.reggie.mapper.OrderMapper;
 import cn.luxun.reggie.service.*;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;

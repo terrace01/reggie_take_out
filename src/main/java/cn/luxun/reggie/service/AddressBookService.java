@@ -1,7 +1,7 @@
 package cn.luxun.reggie.service;
 
-import cn.luxun.reggie.common.Result;
-import cn.luxun.reggie.entity.AddressBook;
+import cn.luxun.reggie.model.Result;
+import cn.luxun.reggie.model.entity.AddressBook;
 import com.baomidou.mybatisplus.extension.service.IService;
 
 import java.util.List;

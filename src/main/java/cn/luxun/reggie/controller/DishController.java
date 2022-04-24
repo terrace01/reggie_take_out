@@ -1,9 +1,9 @@
 package cn.luxun.reggie.controller;
 
-import cn.luxun.reggie.common.Result;
-import cn.luxun.reggie.dto.DishDto;
+import cn.luxun.reggie.model.Result;
+import cn.luxun.reggie.model.dto.DishDto;
 
-import cn.luxun.reggie.entity.Dish;
+import cn.luxun.reggie.model.entity.Dish;
 import cn.luxun.reggie.service.DishService;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import lombok.extern.slf4j.Slf4j;

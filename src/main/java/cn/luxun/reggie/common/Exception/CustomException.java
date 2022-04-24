@@ -1,4 +1,4 @@
-package cn.luxun.reggie.common;
+package cn.luxun.reggie.common.Exception;
 
 /**
  * 自定义业务异常

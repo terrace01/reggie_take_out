@@ -1,4 +1,4 @@
-package cn.luxun.reggie.entity;
+package cn.luxun.reggie.model.entity;
 
 import com.baomidou.mybatisplus.annotation.FieldFill;
 import com.baomidou.mybatisplus.annotation.TableField;

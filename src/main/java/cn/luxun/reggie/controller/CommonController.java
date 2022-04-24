@@ -1,6 +1,6 @@
 package cn.luxun.reggie.controller;
 
-import cn.luxun.reggie.common.Result;
+import cn.luxun.reggie.model.Result;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.GetMapping;

@@ -1,7 +1,7 @@
 package cn.luxun.reggie.config;
 
 
-import cn.luxun.reggie.common.JacksonObjectMapper;
+import cn.luxun.reggie.utils.JacksonObjectMapper;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.converter.HttpMessageConverter;
@@ -24,6 +24,8 @@ public class WebMvcConfig extends WebMvcConfigurationSupport {
 	@Override
 	protected void addResourceHandlers(ResourceHandlerRegistry registry) {
 		log.info("开始进行静态资源映射...");
+		registry.addResourceHandler("doc.html").addResourceLocations("classpath:/META-INF/resources/");
+		registry.addResourceHandler("/webjars/**").addResourceLocations("classpath:/META-INF/resources/webjars/");
 		registry.addResourceHandler("/backend/**").addResourceLocations("classpath:/backend/");
 		registry.addResourceHandler("/front/**").addResourceLocations("classpath:/front/");
 	}

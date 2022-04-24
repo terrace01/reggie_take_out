@@ -1,53 +1,50 @@
-package cn.luxun.reggie.entity;
+package cn.luxun.reggie.model.entity;
 
 import com.baomidou.mybatisplus.annotation.FieldFill;
 import com.baomidou.mybatisplus.annotation.TableField;
 import lombok.Data;
+
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
 /**
- 菜品
+ * 套餐
  */
 @Data
-public class Dish implements Serializable {
+public class Setmeal implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
     private Long id;
 
 
-    //菜品名称
-    private String name;
-
-
-    //菜品分类id
+    //分类id
     private Long categoryId;
 
 
-    //菜品价格
+    //套餐名称
+    private String name;
+
+
+    //套餐价格
     private BigDecimal price;
 
 
-    //商品码
+    //状态 0:停用 1:启用
+    private Integer status;
+
+
+    //编码
     private String code;
-
-
-    //图片
-    private String image;
 
 
     //描述信息
     private String description;
 
 
-    //0 停售 1 起售
-    private Integer status;
-
-
-    //顺序
-    private Integer sort;
+    //图片
+    private String image;
 
 
     @TableField(fill = FieldFill.INSERT)
@@ -68,5 +65,4 @@ public class Dish implements Serializable {
 
     //是否删除
     private Integer isDeleted;
-
 }

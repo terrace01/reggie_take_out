@@ -1,11 +1,8 @@
 package cn.luxun.reggie.controller;
 
-import cn.luxun.reggie.common.EmployeeThreadLocal;
-import cn.luxun.reggie.common.Result;
-import cn.luxun.reggie.entity.AddressBook;
+import cn.luxun.reggie.model.Result;
+import cn.luxun.reggie.model.entity.AddressBook;
 import cn.luxun.reggie.service.AddressBookService;
-import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
-import com.baomidou.mybatisplus.core.conditions.update.LambdaUpdateWrapper;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
