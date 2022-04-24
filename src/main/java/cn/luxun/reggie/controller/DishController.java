@@ -5,10 +5,10 @@ import cn.luxun.reggie.dto.DishDto;
 
 import cn.luxun.reggie.entity.Dish;
 import cn.luxun.reggie.service.DishService;
-import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -20,6 +20,7 @@ public class DishController {
 
 	@Autowired
 	private DishService dishService;
+
 
 	/**
 	 * 新增菜品
